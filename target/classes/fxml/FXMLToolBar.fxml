@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifes.ci.cultup.controller.FXMLToolBarController">
+   <children>
+      <ToolBar prefHeight="50.0" prefWidth="370.0" style="-fx-background-color: #2196f3;">
+         <items>
+            <ToggleButton fx:id="home" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleTBHome" prefHeight="40.0" prefWidth="86.25" styleClass="home" />
+            <ToggleButton fx:id="user" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleTBUser" prefHeight="40.0" prefWidth="86.25" styleClass="user" />
+            <ToggleButton fx:id="groupuser" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="86.25" styleClass="groupuser" />
+            <ToggleButton fx:id="calendar" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="86.25" styleClass="calendar" />
+         </items>
+         <padding>
+            <Insets left="5.0" right="5.0" />
+         </padding>
+      </ToolBar>
+   </children>
+</AnchorPane>

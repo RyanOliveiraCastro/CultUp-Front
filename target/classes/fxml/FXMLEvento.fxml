@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="370.0" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifes.ci.cultup.controller.FXMLEventoController">
+   <children>
+      <BorderPane prefHeight="700.0" prefWidth="370.0">
+         <top>
+            <ToolBar accessibleRole="TEXT_FIELD" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #2196f3;" BorderPane.alignment="CENTER">
+               <items>
+                  <ToggleButton fx:id="TBReturn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleTBVoltar" prefHeight="25.0" prefWidth="25.0" styleClass="back" translateX="5.0" />
+                  <TextField fx:id="TFSearch" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="30.0" prefWidth="250.0" styleClass="search" text="Pesquisar" translateX="20.0">
+                     <padding>
+                        <Insets left="5.0" right="25.0" />
+                     </padding></TextField>
+                  <ToggleButton fx:id="TBStar1" layoutX="-25.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" styleClass="search" translateX="-15.0" />
+                  <ToggleButton fx:id="TBStar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" styleClass="star" />
+               </items>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </ToolBar>
+         </top>
+         <bottom>
+            <fx:include source="FXMLToolBar.fxml" />
+         </bottom>
+         <center>
+            <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" hmax="0.0" prefHeight="600.0" prefWidth="370.0" vbarPolicy="NEVER" vmax="0.0" BorderPane.alignment="CENTER">
+               <content>
+                  <AnchorPane fx:id="anchorPane2" prefHeight="597.0" prefWidth="370.0">
+                     <children>
+                              <StackPane alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="180.0" prefWidth="360.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                 <children>
+                                    <ImageView fx:id="imageviewEvento" fitHeight="180.0" fitWidth="360.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../../../img/exposul.png" />
+                                 </image>
+                              </ImageView>
+                                 </children>
+                              </StackPane>     
+                              <Label fx:id="tituloEvento" alignment="TOP_LEFT" layoutX="5.0" layoutY="187.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="62.0" prefWidth="360.0" style="-fx-background-color: #e5e5e5;" text="Exposul Rural 2019 - Evento Agropecuario" wrapText="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                           <padding>
+                              <Insets left="5.0" right="15.0" />
+                           </padding>
+                              </Label>
+                              <Label fx:id="localEvento" layoutX="5.0" layoutY="249.0" prefHeight="22.0" prefWidth="360.0" style="-fx-background-color: #e5e5e5;" text="Parque de Exposições Carlos Caiado Barbosa" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                           <padding>
+                              <Insets left="5.0" right="15.0" />
+                           </padding>
+                              </Label>
+                              <Label fx:id="enderecoEvento" layoutX="5.0" layoutY="271.0" prefHeight="22.0" prefWidth="360.0" style="-fx-background-color: #e5e5e5;" text="Aeroporto, Cachoeiro de Itapemirim – ES" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                           <padding>
+                              <Insets left="5.0" right="15.0" />
+                           </padding>
+                              </Label>
+                              <Label fx:id="dataHoraEvento" layoutX="5.0" layoutY="293.0" prefHeight="22.0" prefWidth="360.0" style="-fx-background-color: #e5e5e5;" text="10 de abril de 2019 - 20h" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                           <padding>
+                              <Insets left="5.0" right="15.0" />
+                           </padding>
+                              </Label>
+                        <ToggleButton fx:id="TBInteresse" alignment="TOP_CENTER" contentDisplay="BOTTOM" layoutX="5.0" layoutY="317.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="57.0" prefWidth="120.0" style="-fx-background-color: #e5e5e5; -fx-border-radius: 0; -fx-border-color: #e5e5e5;" styleClass="starBorder" text="Tenho Interesse" AnchorPane.leftAnchor="5.0" />
+                        <ToggleButton fx:id="TBEuvou" alignment="TOP_CENTER" contentDisplay="BOTTOM" layoutX="125.0" layoutY="317.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="57.0" prefWidth="120.0" style="-fx-background-color: #e5e5e5; -fx-border-radius: 0;" styleClass="checkBorder" text="Eu vou" />
+                        <ToggleButton fx:id="TBCompartilhar" alignment="TOP_CENTER" contentDisplay="BOTTOM" layoutX="245.0" layoutY="317.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="57.0" prefWidth="120.0" style="-fx-background-color: #e5e5e5; -fx-border-radius: 0;" styleClass="share-border" text="Compartilhar" AnchorPane.rightAnchor="5.0">
+                           <padding>
+                              <Insets right="15.0" />
+                           </padding></ToggleButton>
+                              <Label layoutX="5.0" layoutY="377.0" prefHeight="30.0" prefWidth="360.0" style="-fx-background-color: #e5e5e5;" text="DESCRIÇÃO" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                           <padding>
+                              <Insets left="5.0" right="15.0" />
+                           </padding>
+                              </Label>
+                              <Label fx:id="descricaoEvento" alignment="TOP_LEFT" layoutX="5.0" layoutY="407.0" prefHeight="190.0" prefWidth="360.0" style="-fx-background-color: #e5e5e5;" text="Feira agropecuaria do sul do estado do Espirito Santo, abcdefghiabcdie abdedasdj asd sadasda ergf asdasd asdasd asdasd jkhjkhg jhregeih uhfiwef we hfiwuefhçiuhf " wrapText="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="15.0" top="5.0" />
+                                 </padding>
+                              </Label>
+                        <Button fx:id="BTNAlterarEvento" disable="true" layoutX="100.0" layoutY="607.0" mnemonicParsing="false" onAction="#handleBTNAlterarEvento" opacity="0.0" prefHeight="30.0" prefWidth="150.0" text="ALTERAR" />
+                        <Label disable="true" layoutY="627.0" opacity="0.0" prefHeight="20.0" prefWidth="150.0" AnchorPane.leftAnchor="171.0" AnchorPane.rightAnchor="171.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

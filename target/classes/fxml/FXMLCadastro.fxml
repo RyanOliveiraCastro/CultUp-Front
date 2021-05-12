@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="700.0" prefWidth="370.0" xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifes.ci.cultup.controller.FXMLCadastroController">
+    <children>
+      
+        <BorderPane prefHeight="700.0" prefWidth="370.0">
+            <center>
+                <AnchorPane fx:id="anchorPane2" prefHeight="600.0" prefWidth="370.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <ImageView fx:id="Logo" fitHeight="200.0" fitWidth="200.0" layoutX="85.0" layoutY="5.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="5.0">
+                            <image>
+                                <Image url="@imagem/cultup-logo-2x.png" />
+                            </image>
+                        </ImageView>
+                        <GridPane prefHeight="325.0" prefWidth="350.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="200.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints maxHeight="30.0" minHeight="30.0" percentHeight="0.0" prefHeight="30.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="30.0" minHeight="30.0" percentHeight="0.0" prefHeight="30.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="30.0" minHeight="30.0" percentHeight="0.0" prefHeight="30.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Label alignment="BOTTOM_LEFT" text="Nome Completo">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFNomeCompleto" prefHeight="30.0" promptText="Nome Completo" GridPane.rowIndex="1">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </TextField>
+                                <Label alignment="BOTTOM_LEFT" prefHeight="20.0" text="Data de Nascimento" GridPane.rowIndex="2">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                                <DatePicker fx:id="DPDtnasc" prefHeight="30.0" prefWidth="350.0" promptText="00/00/0000" GridPane.rowIndex="3" />
+                                <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+                                    <children>
+                                        <HBox alignment="BOTTOM_LEFT" prefHeight="35.0" prefWidth="350.0">
+                                            <children>
+                                                <Label alignment="BOTTOM_LEFT" prefHeight="20.0" prefWidth="135.0" text="Estado">
+                                                    <font>
+                                                        <Font size="14.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label alignment="BOTTOM_LEFT" prefHeight="20.0" prefWidth="195.0" text="Cidade">
+                                                    <font>
+                                                        <Font size="14.0" />
+                                                    </font>
+                                                    <HBox.margin>
+                                                        <Insets left="10.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                            </children>
+                                            <HBox.margin>
+                                                <Insets />
+                                            </HBox.margin>
+                                        </HBox>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="30.0" prefWidth="300.0" GridPane.rowIndex="5" GridPane.valignment="BOTTOM">
+                                    <children>
+                                        <ComboBox fx:id="CBEstado" accessibleRole="CHECK_BOX" onAction="#loadComboboxCidade" prefHeight="30.0" prefWidth="135.0" promptText="Estado" />
+                                        <ComboBox fx:id="CBCidade" maxHeight="30.0" maxWidth="205.0" prefHeight="30.0" prefWidth="205.0" promptText="Cidade">
+                                            <HBox.margin>
+                                                <Insets left="10.0" />
+                                            </HBox.margin>
+                                        </ComboBox>
+                                    </children>
+                                </HBox>
+                                <Label alignment="BOTTOM_LEFT" text="Email" GridPane.rowIndex="6">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFEmail" prefHeight="30.0" promptText="Email" GridPane.rowIndex="7">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </TextField>
+                                <Label alignment="BOTTOM_LEFT" text="Senha" GridPane.rowIndex="8">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                                <PasswordField fx:id="PFSenha" minHeight="30.0" prefHeight="30.0" promptText="Senha" GridPane.rowIndex="9">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </PasswordField>
+                                <Button fx:id="BTNCadastrar" maxWidth="180.0" mnemonicParsing="false" onAction="#handleButtonConfirmar" prefHeight="30.0" prefWidth="180.0" text="CADASTRAR" GridPane.halignment="CENTER" GridPane.rowIndex="11" />
+                            </children>
+                        </GridPane>
+                    </children>
+                </AnchorPane>
+            </center>
+         <bottom>
+            <fx:include source="FXMLToolBar.fxml" />
+         </bottom>
+         <top>
+            <ToolBar accessibleRole="TEXT_FIELD" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #2196f3;" BorderPane.alignment="CENTER">
+               <items>
+                  <ToggleButton fx:id="TBReturn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleTBVoltar" prefHeight="25.0" prefWidth="25.0" styleClass="back" translateX="5.0" />
+                  <TextField fx:id="TFSearch" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="30.0" prefWidth="250.0" styleClass="search" text="Pesquisar" translateX="20.0">
+                     <padding>
+                        <Insets left="5.0" right="25.0" />
+                     </padding>
+                  </TextField>
+                  <ToggleButton fx:id="search" layoutX="-25.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" styleClass="search" translateX="-15.0" />
+                  <ToggleButton fx:id="TBStar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" styleClass="star" />
+               </items>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </ToolBar>
+         </top>
+        </BorderPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,12 @@
+<ul>
+<li>FEATURE: Javadoc on fields will now also be copied to the Builders' setters. Thanks for the contribution, Emil Lundberg.</li>
+<li>FEATURE: The <code>@FieldNameConstants</code> feature now allows you to write the inner type by hand and add whatever you like to it; lombok will add the constants to this class. See the updated FieldNameConstants feature page.</li>
+<li>FEATURE: There is now a <code>lombok.config</code> key to configure <code>@ToString</code>'s call super behavior; it's just like <code>@EqualsAndHashCode</code> which has had it for a while now.</li>
+<li>ENHANCEMENT: The toString generation of enums now contains the name of the enum constant.</li>
+<li>PLATFORM: Due to changes to switch statements in JDK12, lombok wasn't working with the JDK12 preview.</li>
+<li>BUGFIX: Using <code>@Delegate</code> in combination <code>@NonNull</code> would give an error in jdk8.</li>
+<li>BUGFIX: Using the new <code>@FieldNameConstants</code> in eclipse would cause errors in the error log view, and error popups if save actions are turned on.</li>
+<li>BUGFIX: Since version 1.18.4, the delombok ant task didn't work and errored with a <code>NoClassDefFoundError</code>.</li>
+<li>BUGFIX: Combining both <code>@Setter</code> and <code>@Wither</code> on the same field, when that field also has javadoc with a <code>--setter--</code> section or an <code>@param</code> tag, resulted in a race condition where the first handler to get to the field would take that part of the javadoc. This is a step along the way to fixing</li>
+<li>BUGFIX: Compiling multi-module projects would fail on forcing new rounds. , , ,</li>
+</ul>

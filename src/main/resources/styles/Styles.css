@@ -1,0 +1,90 @@
+.button {
+    -fx-font-weight: bold;
+}
+.toggle-button.back {
+    -fx-graphic: url('/imagem/right-arrow.png');
+    -fx-background-color: none;
+}
+.toggle-button.user {
+    -fx-graphic: url('/imagem/user-alt-solid-2x.png');
+    -fx-background-color: none;
+}
+.toggle-button.home {
+    -fx-graphic: url('/imagem/home-icon-silhouette.png');
+    -fx-background-color: none;   
+}
+.toggle-button.search {
+    -fx-graphic: url('/imagem/search.png');
+    -fx-background-color: none;   
+}
+
+.toggle-button.groupuser {
+    -fx-graphic: url('/imagem/multiple-users-silhouette.png');
+    -fx-background-color: none;
+}
+.toggle-button.calendar {
+    -fx-graphic: url('/imagem/calendar.png');
+    -fx-background-color: none;
+}
+.toggle-button.star{
+    -fx-graphic: url('/imagem/star.png');
+    -fx-background-color: none;
+}
+.toggle-button.starBorder{
+    -fx-graphic: url('/imagem/star-border_redonda.png');
+    -fx-background-color: none;
+}
+.toggle-button.checkBorder{
+    -fx-graphic: url('/imagem/check-circle-regular.png');
+    -fx-background-color: none;
+}
+.toggle-button.check{
+    -fx-graphic: url('/imagem/check-circle-solid.png');
+    -fx-background-color: none;
+}
+.toggle-button.share-solid{
+    -fx-graphic: url('/imagem/share-solid.png');
+    -fx-background-color: none;
+}
+.toggle-button.share-border{
+    -fx-graphic: url('/imagem/share-regular.png');
+    -fx-background-color: none;
+}
+.toggle-button.foto{
+    -fx-graphic: url('/imagem/photo-camera.png');
+    -fx-background-color: none;
+}
+.toggle-button.addImagem{
+    -fx-graphic: url('/imagem/photo-camera-128-white.png');
+    -fx-background-color: none;
+}
+
+.toggle-button.add{
+    -fx-graphic: url('/imagem/round-add-button.png');
+    -fx-background-color: none;
+}
+.scroll-bar{
+    -fx-background-color:transparent;
+}
+
+.increment-button, .decrement-button{
+    -fx-background-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-padding:0 0 0 0;
+}
+
+.increment-arrow, .decrement-arrow{
+    -fx-shape: "";	
+    -fx-padding:0;
+}
+.track{
+    -fx-background-color: transparent;
+    -fx-border-color:none;
+    -fx-background-radius: 0em;
+    
+}
+.thumb{
+    -fx-background-color:derive(black,100%);
+    -fx-background-insets: 0, 0, 0;
+    -fx-background-radius: 0em;
+}

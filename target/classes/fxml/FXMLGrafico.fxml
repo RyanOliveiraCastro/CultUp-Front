@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="acnhorPane" prefHeight="700.0" prefWidth="370.0" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifes.ci.cultup.controller.FXMLGraficoController">
+   <children>
+      <BorderPane prefHeight="700.0" prefWidth="370.0">
+         <bottom>
+            <fx:include source="FXMLToolBar.fxml" />
+         </bottom>
+         <top>
+            <ToolBar accessibleRole="TEXT_FIELD" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #2196f3;" BorderPane.alignment="CENTER">
+               <items>
+                  <ToggleButton fx:id="TBReturn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" styleClass="back" translateX="5.0" />
+                  <TextField fx:id="TFSearch" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="30.0" prefWidth="250.0" styleClass="search" text="Pesquisar" translateX="20.0">
+                     <padding>
+                        <Insets left="5.0" right="25.0" />
+                     </padding>
+                  </TextField>
+                  <ToggleButton fx:id="search" layoutX="-25.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" styleClass="search" translateX="-15.0" />
+                  <ToggleButton fx:id="TBStar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" styleClass="star" />
+               </items>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </ToolBar>
+         </top>
+         <left>
+            <AnchorPane prefHeight="600.0" prefWidth="370.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" layoutX="8.0" layoutY="14.0" prefHeight="35.0" prefWidth="350.0" text="Relatório de Eventos" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="CBRelatorios" layoutX="10.0" layoutY="55.0" prefHeight="30.0" prefWidth="350.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                  <BarChart fx:id="BC" layoutY="95.0" prefHeight="320.0" prefWidth="370.0" style="-fx-border-color: black;" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                    <xAxis>
+                      <CategoryAxis fx:id="CA" side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="NA" side="LEFT" tickLength="4.0" />
+                    </yAxis>
+                  </BarChart>
+                  <Label fx:id="LBDescricao" alignment="TOP_LEFT" layoutX="5.0" layoutY="420.0" prefHeight="100.0" prefWidth="360.0" style="-fx-border-color: black;" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <Button fx:id="BTNPDF" layoutX="20.0" layoutY="545.0" mnemonicParsing="false" onAction="#imprimirRelEveMesAno" prefHeight="30.0" prefWidth="150.0" text="PDF" />
+                  <Button fx:id="BTNImagem" layoutX="200.0" layoutY="545.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" text="IMAGEM" />
+               </children>
+            </AnchorPane>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>
